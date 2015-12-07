@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="softwareSecurity.Transactions" table="Transactions">
+      <meta attribute="class-description">
+         This class contains the internal users detail. 
+      </meta>
+      <id name="transactionID" type="string" column="transactionID">
+         <generator class="assigned"/>
+      </id>
+      <property name="fromAccountNumber" column="fromAccountNumber" type="string"/>
+      <property name="transactionDate" column="transactionDate" type="string"/>
+      <property name="toAccountNumber" column="toAccountNumber" type="string"/>
+      <property name="amount" column="amount" type="int"/>
+   </class>
+</hibernate-mapping>

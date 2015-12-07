@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="softwareSecurity.Accounts" table="Accounts">
+      <meta attribute="class-description">
+         This class contains the all users login credentials. 
+      </meta>
+      <id name="accountNumber" type="string" column="accountNumber">
+         <generator class="assigned"/>
+      </id>
+      <property name="userName" column="userName" type="string"/>
+      <property name="cardNumber" column="cardNumber" type="string"/>
+      <property name="balance" column="balance" type="int"/>
+      <property name="CVV" column="CVV" type="int"/>
+      <property name="cardExpiry" column="cardExpiry" type="date"/>           
+   </class>
+</hibernate-mapping>

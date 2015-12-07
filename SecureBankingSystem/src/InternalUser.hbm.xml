@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="softwareSecurity.InternalUser" table="internalusers">
+      <meta attribute="class-description">
+         This class contains the internal users detail. 
+      </meta>
+      <id name="userName" type="string" column="userName">
+         <generator class="assigned"/>
+      </id>
+      <property name="firstName" column="firstName" type="string"/>
+      <property name="lastName" column="lastName" type="string"/>
+      <property name="address1" column="address1" type="string"/>
+      <property name="address2" column="address2" type="string"/>
+      <property name="city" column="city" type="string"/>
+      <property name="state" column="state" type="string"/>
+      <property name="zipcode" column="zipcode" type="string"/>
+      <property name="phoneNumber" column="phoneNumber" type="string"/>
+      <property name="cellNumber" column="cellNumber" type="string"/>
+      <property name="department" column="department" type="string"/>
+      <property name="manager" column="manager" type="string"/>
+      <property name="salary" column="salary" type="int"/>
+      <property name="SSN" column="SSN" type="string"/>
+      <property name="email" column="email" type="string"/>
+      <property name="activeSessionID" column="activeSessionID" type="string"/>
+      <property name="MACaddress" column="MACaddress" type="string"/>
+      <property name="firstDelete" column="firstDelete" type="int"/>
+	  <property name="secondDelete" column="secondDelete" type="int"/>
+      <property name="securityQues1" column="securityQues1" type="string"/>
+      <property name="securityAns1" column="securityAns1" type="string"/>
+      <property name="securityQues2" column="securityQues2" type="string"/>
+      <property name="securityAns2" column="securityAns2" type="string"/>
+      <property name="securityQues3" column="securityQues3" type="string"/>
+	  <property name="securityAns3" column="securityAns3" type="string"/>
+	  <property name="Designation" column="Designation" type="string"></property>	  
+   </class>
+</hibernate-mapping>

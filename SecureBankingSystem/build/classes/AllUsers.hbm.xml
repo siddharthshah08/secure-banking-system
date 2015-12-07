@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="softwareSecurity.AllUsers" table="allusers">
+      <meta attribute="class-description">
+         This class contains the all users login credentials. 
+      </meta>
+      <id name="userName" type="string" column="userName">
+         <generator class="assigned"/>
+      </id>
+      <property name="password" column="password" type="string"/>
+      <property name="userType" column="userType" type="string"/>
+      <property name="isBlocked" column="isBlocked" type="int"/>
+                 
+   </class>
+</hibernate-mapping>
